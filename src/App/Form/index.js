@@ -34,6 +34,7 @@ export const Form = ({ calculateResult, result }) => {
                             placeholder="Wpisz kwotę w złotówkach"
                             type="number"
                             required
+                            min="1"
                         />
                     </label>
                 </p>
