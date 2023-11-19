@@ -1,8 +1,23 @@
 # Currency Converter React
 
-Description
+## Description:
+   This is a simple currency converter in React. The calculator allows you to convert Polish currency into EURO and USD.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+   This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Demo: 
+   https://paupio.github.io/currency-converter-react
+
+   ![image](https://github.com/Paupio/currency-converter-react/blob/main/public/screen.png)
+
+## Technologies:
+- BEM
+- CSS
+- Grid
+- Flex
+- HTML
+- JavaScript
+- React
 
 ## Available Scripts
 
