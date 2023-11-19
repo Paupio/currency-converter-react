@@ -6,7 +6,7 @@
 }
 
 .form__fieldset {
-    background: rgba(196, 190, 190, 0.505);
+    background: rgba(238, 235, 235, 0.505);
     border: 1px solid;
     border-radius: 10px;
     font-size: 16px;
@@ -16,7 +16,6 @@
 .form__legend {
     font-size: 36px;
     text-align: center;
-    margin: 20px
 }
 
 .form__labelText {
