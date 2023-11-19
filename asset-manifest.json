@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/currency-converter-react/static/css/main.1db02084.css",
-    "main.js": "/currency-converter-react/static/js/main.7896d54e.js",
+    "main.css": "/currency-converter-react/static/css/main.84475b34.css",
+    "main.js": "/currency-converter-react/static/js/main.e46d0119.js",
     "static/js/787.9bcb2e4b.chunk.js": "/currency-converter-react/static/js/787.9bcb2e4b.chunk.js",
     "static/media/background.jpg": "/currency-converter-react/static/media/background.38e46d270725c17a2215.jpg",
     "index.html": "/currency-converter-react/index.html",
-    "main.1db02084.css.map": "/currency-converter-react/static/css/main.1db02084.css.map",
-    "main.7896d54e.js.map": "/currency-converter-react/static/js/main.7896d54e.js.map",
+    "main.84475b34.css.map": "/currency-converter-react/static/css/main.84475b34.css.map",
+    "main.e46d0119.js.map": "/currency-converter-react/static/js/main.e46d0119.js.map",
     "787.9bcb2e4b.chunk.js.map": "/currency-converter-react/static/js/787.9bcb2e4b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1db02084.css",
-    "static/js/main.7896d54e.js"
+    "static/css/main.84475b34.css",
+    "static/js/main.e46d0119.js"
   ]
 }
