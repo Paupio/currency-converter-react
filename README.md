@@ -8,7 +8,7 @@
 ## Demo: 
    https://paupio.github.io/currency-converter-react
 
-   ![image](https://github.com/Paupio/currency-converter-react/blob/main/public/screen.png)
+   ![image](https://github.com/Paupio/currency-converter-react/blob/main/public/screen2.png)
 
 ## Technologies:
 - BEM
