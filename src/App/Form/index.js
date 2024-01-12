@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
-import "./style.css";
+import { Header, Fieldset, Legend, LabelText, Field, Button, Container } from "./styled"
 import Clock from "./Clock";
 
 export const Form = ({ calculateResult, result }) => {
@@ -14,23 +14,15 @@ export const Form = ({ calculateResult, result }) => {
     }
 
     return (
-        <form className="form" onSubmit={onSubmit}>
-            <h1 className="form__header">
-                Przelicznik walut
-            </h1>
-            <fieldset className="form__fieldset">
-                <legend className="form__legend">
-                    Kalkulator
-                </legend>
+        <form onSubmit={onSubmit}>
+            <Header>Przelicznik walut</Header>
+            <Fieldset>
+                <Legend>Kalkulator</Legend>
                 <p>
                     <Clock />
-                    <label className="container">
-                        <span className="form__labelText">
-                            Kwota w zł*:
-                        </span>
-                        <input
-                            autoFocus
-                            className="form__field"
+                    <Container>
+                        <LabelText>Kwota w zł*:</LabelText>
+                        <Field
                             value={amount}
                             onChange={({ target }) => setAmount(target.value)}
                             placeholder="Wpisz kwotę w złotówkach"
@@ -38,15 +30,13 @@ export const Form = ({ calculateResult, result }) => {
                             required
                             min="1"
                         />
-                    </label>
+                    </Container>
                 </p>
                 <p>
-                    <label className="container">
-                        <span className="form__labelText">
-                            Wybierz walutę:
-                        </span>
-                        <select
-                            className="form__field"
+                    <Container>
+                        <LabelText>Wybierz walutę:</LabelText>
+                        <Field
+                            as="select"
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}
                         >
@@ -58,19 +48,17 @@ export const Form = ({ calculateResult, result }) => {
                                     {currency.name}
                                 </option>
                             )))}
-                        </select>
-                    </label>
+                        </Field>
+                    </Container>
                 </p>
                 <p>
-                    <button className="form__button">
-                        <strong>Przelicz</strong>
-                    </button>
+                    <Button><strong>Przelicz</strong></Button>
                 </p>
                 <p>
                     <i>Pola wymagane oznaczone są *</i>
                 </p>
                 <Result result={result} />
-            </fieldset>
+            </Fieldset>
         </form>
     );
 };
