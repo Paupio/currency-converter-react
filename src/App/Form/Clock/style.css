@@ -1,8 +1,0 @@
-.clock {
-    display: flex;
-    flex-direction: row-reverse;
-    padding-bottom: 20px;
-    font-family: monospace;
-    font-size: 14px;
-    color: black;
-}
