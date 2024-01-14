@@ -2,7 +2,7 @@ import { StyledResult } from "./styled";
 
 export const Result = ({ result }) => (
     <StyledResult>
-        {result !== undefined && (
+        {result && (
             <>
                 {result.sourceAmount.toFixed(2)}&nbsp;PLN&nbsp;=&nbsp;
                 <strong>

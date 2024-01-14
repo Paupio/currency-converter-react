@@ -14,51 +14,53 @@ export const Form = ({ calculateResult, result }) => {
     }
 
     return (
-        <form onSubmit={onSubmit}>
+        <>
             <Header>Przelicznik walut</Header>
-            <Fieldset>
-                <Legend>Kalkulator</Legend>
-                <p>
-                    <Clock />
-                    <Container>
-                        <LabelText>Kwota w zł*:</LabelText>
-                        <Field
-                            value={amount}
-                            onChange={({ target }) => setAmount(target.value)}
-                            placeholder="Wpisz kwotę w złotówkach"
-                            type="number"
-                            required
-                            min="1"
-                        />
-                    </Container>
-                </p>
-                <p>
-                    <Container>
-                        <LabelText>Wybierz walutę:</LabelText>
-                        <Field
-                            as="select"
-                            value={currency}
-                            onChange={({ target }) => setCurrency(target.value)}
-                        >
-                            {currencies.map((currency => (
-                                <option
-                                    key={currency.short}
-                                    value={currency.short}
-                                >
-                                    {currency.name}
-                                </option>
-                            )))}
-                        </Field>
-                    </Container>
-                </p>
-                <p>
-                    <Button><strong>Przelicz</strong></Button>
-                </p>
-                <p>
-                    <i>Pola wymagane oznaczone są *</i>
-                </p>
-                <Result result={result} />
-            </Fieldset>
-        </form>
+            <form onSubmit={onSubmit}>
+                <Fieldset>
+                    <Legend>Kalkulator</Legend>
+                    <p>
+                        <Clock />
+                        <Container>
+                            <LabelText>Kwota w zł*:</LabelText>
+                            <Field
+                                value={amount}
+                                onChange={({ target }) => setAmount(target.value)}
+                                placeholder="Wpisz kwotę w złotówkach"
+                                type="number"
+                                required
+                                min="1"
+                            />
+                        </Container>
+                    </p>
+                    <p>
+                        <Container>
+                            <LabelText>Wybierz walutę:</LabelText>
+                            <Field
+                                as="select"
+                                value={currency}
+                                onChange={({ target }) => setCurrency(target.value)}
+                            >
+                                {currencies.map((currency => (
+                                    <option
+                                        key={currency.short}
+                                        value={currency.short}
+                                    >
+                                        {currency.name}
+                                    </option>
+                                )))}
+                            </Field>
+                        </Container>
+                    </p>
+                    <p>
+                        <Button><strong>Przelicz</strong></Button>
+                    </p>
+                    <p>
+                        <i>Pola wymagane oznaczone są *</i>
+                    </p>
+                    <Result result={result} />
+                </Fieldset>
+            </form>
+        </>
     );
 };
