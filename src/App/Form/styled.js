@@ -51,3 +51,10 @@ export const Container = styled.label`
     padding: 10 40px;
 `;
 
+export const Loading = styled.p`
+  color: ${({ theme }) => theme.color.teal};
+`;
+
+export const Failure = styled.p`
+  color: ${({ theme }) => theme.color.crimson};
+`;
