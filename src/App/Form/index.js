@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { currencies } from "../currencies";
 import { Result } from "./Result";
 import { Header, Fieldset, Legend, LabelText, Field, Button, Container, Loading, Failure } from "./styled"
 import Clock from "./Clock";
@@ -10,14 +9,14 @@ export const Form = () => {
     const ratesData = useRatesData();
 
     const calculateResult = (currency, amount) => {
-        const rate = ratesData.rates[currency];
+        const rate = ratesData.rates[currency].value;
 
         setResult({
             sourceAmount: +amount,
             targetAmount: amount * rate,
             currency,
         });
-    }
+    };
 
     const [currency, setCurrency] = useState("EUR");
     const [amount, setAmount] = useState("");
@@ -25,7 +24,7 @@ export const Form = () => {
     const onSubmit = (event) => {
         event.preventDefault();
         calculateResult(currency, amount);
-    }
+    };
 
     return (
         <>
@@ -66,12 +65,9 @@ export const Form = () => {
                                         value={currency}
                                         onChange={({ target }) => setCurrency(target.value)}
                                     >
-                                        {Object.keys(ratesData.rates).map((currency) => (
-                                            <option
-                                                key={currency.short}
-                                                value={currency.short}
-                                            >
-                                                {currency.name}
+                                        {ratesData.rates && Object.keys(ratesData.rates).map((currency) => (
+                                            <option key={currency} value={currency}>
+                                                {currency}
                                             </option>
                                         ))}
                                     </Field>
@@ -84,7 +80,9 @@ export const Form = () => {
                                 <i>Pola wymagane oznaczone są *</i>
                             </p>
                             <Result result={result} />
-                        </Fieldset>
+                        </>
+                    )}
+                </Fieldset>
             </form>
         </>
     );
