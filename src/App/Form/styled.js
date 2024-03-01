@@ -3,15 +3,17 @@ import styled from "styled-components";
 export const Header = styled.h1`
     font-size: 60px;
     height: 250px;
-    margin: 0px;
+    margin: -160px;
+    padding: 0px;
     text-align: center;
 `;
 
 export const Fieldset = styled.fieldset`
-    background: rgba(238, 235, 235, 0.505);
+    background: beige;
     border: 1px solid;
     border-radius: 10px;
     font-size: 16px;
+    margin-top: 5px;
     text-align: center;
 `;
 
@@ -53,8 +55,16 @@ export const Container = styled.label`
 
 export const Loading = styled.p`
   color: ${({ theme }) => theme.color.teal};
+  height: 250px;
+  padding: 70px;
+  text-align: center;
+  font-size: 30px;
 `;
 
 export const Failure = styled.p`
   color: ${({ theme }) => theme.color.crimson};
+  height: 250px;
+  padding: 70px;
+  text-align: center;
+  font-size: 30px;
 `;

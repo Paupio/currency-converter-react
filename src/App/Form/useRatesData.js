@@ -4,8 +4,6 @@ import { getCurrenciesDataFromApi } from "./api";
 export const useRatesData = () => {
     const [ratesData, setRatesData] = useState({
         state: "loading",
-        rates: null,
-        date: null,
     });
 
     useEffect(() => {
